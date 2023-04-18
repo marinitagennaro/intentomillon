@@ -1,0 +1,140 @@
+//variables colores fondo, colores letra, tipo de letras
+
+$color-fondo-primero: rgb(247, 247, 212);
+$color-fondo-segundo: rgb(252, 246, 246);
+$color-volverPagPrincipal:rgb(98, 143, 143);
+$color-letra: grey;
+$color-letra-btn: rgb(240, 222, 120);
+$tipo-letra-navbar: Verdana, Geneva, Tahoma, sans-serif;
+$tipo-letra-texto: italic;
+$tipo-letra-lista: 'Roboto';
+$tipo-letra-volverPagPrincipal:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$size-volverPagPrincipal: 20px;
+$size-letra-titulos: 28px;
+
+
+
+img
+{
+	width: 80px;
+	height: 80px;
+    margin-left: 3%;
+    cursor: pointer;
+	display: block;
+	border-radius: 35%;
+    box-shadow: 0 5px 10px -5px rgb(0, 0, 0);
+}
+body
+{
+    background-color: $color-fondo-primero;
+    color: $color-letra;
+}
+.conteiner
+{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.navbar 
+{
+    width: 80%;
+    margin: 15px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a
+{
+    text-decoration: none;
+    color: $color-letra;
+    font-family: $tipo-letra-navbar;
+}
+.navbar ul li::before
+{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: rgba(214, 30, 61, 0.651);
+    position: absolute;
+    left: 0%;
+    bottom: -12px;
+    transition: 0.4s ease-out;   
+}
+.navbar ul li:hover::before
+{
+    width: 100%;
+}
+.footermat
+{
+	font-size: 10px;
+	background-color: rgb(238, 192, 192);
+	color: #c7265e;
+	border: solid 2px;
+    justify-content: center;
+	text-align: center;
+    bottom: 0;
+    width: 20%;
+    margin-top: 15px;
+}
+.conteiner-materiales
+{
+    width: 97%;
+    height: 120vh;
+    margin: 10px;
+    padding: 10px;
+    background-color: $color-fondo-segundo;
+    position: relative;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+h1, h2
+{
+    display: flex;
+    justify-content: center;
+    font-style: $tipo-letra-texto;
+    font-size: $size-letra-titulos;
+}
+ul
+{
+    font-style: $tipo-letra-lista;
+    font-size: 20px;
+}
+.page-link
+{
+	color: $color-volverPagPrincipal;
+	text-decoration: none;
+    font-family: $tipo-letra-volverPagPrincipal;
+	font-size: $size-volverPagPrincipal;
+	background-color: azure;
+}
+//SECTOR DE CONTACTO ANIMACION//
+.btn
+{
+    background-color: grey;
+    animation-name: elBotonAnimado;
+    animation-duration: 5s;
+    position: relative;
+    color: $color-letra-btn;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes elBotonAnimado {
+    0% {background: gray; left: 0px}
+    25% {background: #c7265e; left: 30px}
+    50% {background: #b18896; left: 30px}
+    75% {background: #c49daa; left: 0px}
+    100% {background: #af2454; left: 0px}
+}
